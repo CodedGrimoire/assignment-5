@@ -1,0 +1,146 @@
+/* Global font */
+body {
+    font-family: 'Hind Madurai', sans-serif;
+   
+}
+
+/* Navbar container */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Brand section: logo + stacked text */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    height: 45px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column; /* stack Emergency & Service */
+    line-height: 1.2;
+}
+
+.brand-text .emergency {
+    font-size: 20px;
+    font-weight: 700;
+    color: #006747; /* green */
+}
+
+.brand-text .service {
+    font-size: 20px;
+    font-weight: 700;
+    color: #006747; /* darker green */
+}
+
+/* Right side container */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav ul li {
+    display: flex;
+}
+
+/* Pills (heart, coin, copy) */
+.heart, .coin, .copy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px; /* pill shape */
+    font-size: 18px;
+    font-weight: 600;
+    padding: 6px 14px;
+}
+
+/* Heart pill */
+.heart , .coin{
+    background-color: rgba(65, 255, 107, 0.1);
+
+    color: #000;
+}
+.heart img {
+    width: 22px;
+    height: 22px;
+}
+
+
+.coin img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Copy pill (solid green) */
+.copy {
+    background: #00A63E;
+    color: #fff;
+    cursor: pointer;
+}
+.copy span {
+    font-size: 16px;
+    font-weight: 600;
+}
+.copy h1 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* hero banner  */
+
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 30px 0px;
+    background: linear-gradient(
+  90deg,
+  #013223 0%,
+  #006747 30%,
+  
+  #006747 70%,
+  #013223 100%
+);
+ /* green */
+    color: #fff; /* white text */
+    text-align: center;
+}
+
+/* Hero logo */
+.hero-section img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+}
+
+/* Main heading */
+.hero-section h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+/* Sub text */
+.hero-section p {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
