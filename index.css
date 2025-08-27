@@ -63,7 +63,7 @@ nav ul li {
     display: flex;
     align-items: center;
     gap: 6px;
-    border-radius: 999px; /* pill shape */
+    border-radius: 999px; 
     font-size: 18px;
     font-weight: 600;
     padding: 6px 14px;
@@ -90,7 +90,7 @@ nav ul li {
 .copy {
     background: #00A63E;
     color: #fff;
-    cursor: pointer;
+    
 }
 .copy span {
     font-size: 16px;
@@ -261,12 +261,12 @@ nav ul li {
 }
 
 .call-right .clear-btn {
-  background: #f3f3f3;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
+   background: #00A63E;
+    color: #fff;
+     border-radius: 999px; 
+    border: none;
+    width:55px;
+    height: 30px;
 }
 
 .call-list {
@@ -304,4 +304,15 @@ nav ul li {
 
 #favorite:hover {
   color: red;
+}
+
+
+
+@media (max-width: 576px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .whole-body{
+    flex-direction: column;
+  }
 }
