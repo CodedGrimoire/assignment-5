@@ -292,7 +292,7 @@ nav ul li {
   padding: 8px;
 }
 
-#favorite {
+.favorite {
   background: none;
   border: none;
   outline: none;
@@ -302,7 +302,7 @@ nav ul li {
   transition: color 0.2s ease;
 }
 
-#favorite:hover {
+.favorite:hover {
   color: red;
 }
 
