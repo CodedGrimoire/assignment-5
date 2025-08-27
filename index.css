@@ -151,7 +151,7 @@ nav ul li {
   gap: 20px;
   padding: 20px;
   background-color: #f6fff9;
-  font-family: Arial, sans-serif;
+  
 }
 
 /* Cards grid */
@@ -197,6 +197,7 @@ nav ul li {
   border-radius: 12px;
   margin-bottom: 12px;
   color: #444;
+  width:28px;
 }
 
 .card-buttons {
@@ -276,4 +277,31 @@ nav ul li {
 .call-btn i {
   margin-right: 6px;
   font-size: 14px;
+}
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-head img {
+  width: 40px;   /* adjust size */
+  height: 40px;
+  border-radius: 12px; /* matches rounded square look */
+  background: #ffecec; /* light background like screenshot */
+  padding: 8px;
+}
+
+#favorite {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+#favorite:hover {
+  color: red;
 }
