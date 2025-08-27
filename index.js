@@ -11,8 +11,8 @@ function increaseCopyCount() {
 function decreaseCoinCount() {
   const coinElement = document.getElementById("coinNum");
   let currentCount = parseInt(coinElement.textContent);
-  if (currentCount > 20) {
-    coinElement.textContent = currentCount - 1;
+  if (currentCount >= 20) {
+    coinElement.textContent = currentCount - 20;
   }
 }
 
@@ -32,5 +32,34 @@ function copyPaste(){
     
 }
 
+function checkCoin(){
+    const coinElement = document.getElementById("coinNum");
+    let currentCoin = parseInt(coinElement.textContent);
+    if (currentCoin >= 20){
+        decreaseCoinCount();
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+
+function callButton(){
+    const callButton =document.querySelectorAll(".call-btn")
+    callButton.forEach(button => {
+        button.addEventListener("click", function(){
+            if (checkCoin()){
+                alert("Calling...");
+            }
+            else{
+                alert("Not enough coins!");
+            }
+        });
+    });
+
+}
+
 setupHeartButtons();
 copyPaste();
+callButton();
