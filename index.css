@@ -15,7 +15,7 @@ nav {
    
 }
 
-/* Brand section: logo + stacked text */
+
 .brand {
     display: flex;
     align-items: center;
@@ -28,20 +28,20 @@ nav {
 
 .brand-text {
     display: flex;
-    flex-direction: column; /* stack Emergency & Service */
+    flex-direction: column; 
     line-height: 1.2;
 }
 
 .brand-text .emergency {
     font-size: 20px;
     font-weight: 700;
-    color: #006747; /* green */
+    color: #006747; 
 }
 
 .brand-text .service {
     font-size: 20px;
     font-weight: 700;
-    color: #006747; /* darker green */
+    color: #006747; 
 }
 
 /* Right side container */
@@ -86,7 +86,7 @@ nav ul li {
     height: 22px;
 }
 
-/* Copy pill (solid green) */
+/* Copy pill */
 .copy {
     background: #00A63E;
     color: #fff;
@@ -119,8 +119,8 @@ nav ul li {
   #006747 70%,
   #013223 100%
 );
- /* green */
-    color: #fff; /* white text */
+
+    color: #fff;
     text-align: center;
 }
 
@@ -212,10 +212,13 @@ nav ul li {
   padding: 8px 12px;
   border-radius: 6px;
   border: none;
-  cursor: pointer;
+  
   font-size: 14px;
 }
 
+.call-btn :hover{
+  transform: scale(1.05px);
+}
 .copy-btn {
   background: #f3f3f3;
 }
@@ -269,10 +272,7 @@ nav ul li {
     height: 30px;
 }
 
-.call-list {
-  flex: 1;
-  overflow-y: auto;
-}
+
 .copy-btn i,
 .call-btn i {
   margin-right: 6px;
@@ -285,10 +285,10 @@ nav ul li {
 }
 
 .card-head img {
-  width: 40px;   /* adjust size */
+  width: 40px;   
   height: 40px;
-  border-radius: 12px; /* matches rounded square look */
-  background: #ffecec; /* light background like screenshot */
+  border-radius: 12px; 
+  background: #ffecec; 
   padding: 8px;
 }
 
@@ -323,6 +323,9 @@ nav ul li {
   flex-direction: column;
   gap: 10px; 
   
+}
+.clear-btn:hover {
+  background: #09431c;
 }
 
 .call-item {
