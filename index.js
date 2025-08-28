@@ -28,7 +28,7 @@ function copyPaste() {
     const copyButton = document.querySelectorAll(".copy-btn");
 
     copyButton.forEach(button => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", function(){
             // 1. Find the parent card
             const card = button.closest(".flashcards");
 
@@ -63,22 +63,61 @@ function checkCoin(){
     }
 
 }
+const callHistory = [];
+function addToCallHistory(title, number) {
+     const timestamp = new Date().toLocaleTimeString();
+    callHistory.push({ title, number, timestamp });
+    showCallHistory();
+   
+    
+   
+}
+function showCallHistory() {
+    const callList = document.querySelector(".call-list");
+    callList.innerHTML = "";
 
+    callHistory.forEach(entry => {
+        const callItem = document.createElement("div");
+        callItem.classList.add("call-item");
+        callItem.innerHTML = `
+            <div>
+                <strong>${entry.title}</strong>
+                <small>${entry.number}</small>
+            </div>
+            <span class="time">${entry.timestamp}</span>
+        `;
+        callList.appendChild(callItem);
+    });
+}
 function callButton(){
     const callButton =document.querySelectorAll(".call-btn")
     callButton.forEach(button => {
         button.addEventListener("click", function(){
+             const card = button.closest(".flashcards");
+             const numberElement = card.querySelector(".phone-number");
+            const numberText = numberElement.textContent.trim();
+            const titleElement = card.querySelector(".description");
+            const titleText = titleElement.textContent.trim();
+           
             if (checkCoin()){
-                alert("Calling...");
+                alert("📞 Calling " + titleText + " at " + numberText+"...");
+                addToCallHistory(titleText, numberText);
             }
             else{
-                alert("Not enough coins!");
+                alert("❌ Not enough coins! You need at least 20 coins to make a call.");
             }
         });
     });
 
 }
-
+function clearCallHistory() {
+    document.getElementById("clr-btn")
+.addEventListener("click", function() {
+        callHistory.length = 0; 
+        showCallHistory(); 
+    });
+}
 setupHeartButtons();
 copyPaste();
 callButton();
+clearCallHistory();

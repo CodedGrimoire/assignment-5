@@ -316,3 +316,38 @@ nav ul li {
     flex-direction: column;
   }
 }
+
+.call-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  
+}
+
+.call-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e7e4e4;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.call-item strong {
+  display: block;
+  font-size: 16px;
+  color: #000;
+}
+
+.call-item small {
+  display: block;
+  font-size: 13px;
+  color: #7d7272;
+}
+
+.call-item .time {
+  font-size: 13px;
+  color: #666;
+}
