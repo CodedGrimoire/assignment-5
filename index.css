@@ -307,13 +307,17 @@ nav ul li {
 }
 
 
-
 @media (max-width: 576px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .whole-body{
+
+  .whole-body {
     flex-direction: column;
+  }
+
+  .brand img {
+    display: none;
   }
 }
 
