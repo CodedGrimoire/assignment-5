@@ -27,7 +27,7 @@ function setupHeartButtons() {
 function copyPaste() {
     const copyButton = document.querySelectorAll(".copy-btn");
 
-    copyButton.forEach(button => {
+    for (const button of copyButton) {
         button.addEventListener("click", function(){
             // 1. Find the parent card
             const card = button.closest(".flashcards");
@@ -37,21 +37,17 @@ function copyPaste() {
             const numberText = numberElement.textContent.trim();
 
             // 3. Copy to clipboard
-            navigator.clipboard.writeText(numberText)
-                .then(() => {
-                   
-
-                
+           navigator.clipboard.writeText(numberText)
+                .then(function() {
                     alert("Number copied!");
                     increaseCopyCount();
                 })
-                .catch(err => {
+                .catch(function(err) {
                     console.error("Failed to copy:", err);
                 });
         });
-    });
+    }
 }
-
 function checkCoin(){
     const coinElement = document.getElementById("coinNum");
     let currentCoin = parseInt(coinElement.textContent);
@@ -92,7 +88,7 @@ function showCallHistory() {
 }
 function callButton(){
     const callButton =document.querySelectorAll(".call-btn")
-    callButton.forEach(button => {
+   for (const button of callButton) {
         button.addEventListener("click", function(){
              const card = button.closest(".flashcards");
              const numberElement = card.querySelector(".phone-number");
@@ -106,10 +102,9 @@ function callButton(){
             }
             else{
                 alert("❌ Not enough coins! You need at least 20 coins to make a call.");
-            }
+              }
         });
-    });
-
+    }
 }
 function clearCallHistory() {
     document.getElementById("clr-btn")
