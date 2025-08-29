@@ -39,9 +39,10 @@ function copyPaste() {
             // 3. Copy to clipboard
             navigator.clipboard.writeText(numberText)
                 .then(() => {
-                    console.log(`Copied: ${numberText}`);
+                   
 
-                    // 4. Increase your built-in counter
+                
+                    alert("Number copied!");
                     increaseCopyCount();
                 })
                 .catch(err => {
